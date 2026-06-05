@@ -2,7 +2,8 @@ import time
 import requests
 import streamlit as st
 
-API_URL = "http://localhost:8000"
+import os
+API_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
 API_KEY = "dev-secret"
 HEADERS = {"X-API-Key": API_KEY}
 
